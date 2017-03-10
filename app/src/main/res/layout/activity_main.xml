@@ -5,7 +5,7 @@
     tools:context=".MainActivity" >
 
     <EditText
-        android:id="@+id/editText1"
+        android:id="@+id/textBox1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -16,28 +16,28 @@
 
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/textBox2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editText1"
-        android:layout_below="@+id/editText1"
+        android:layout_alignLeft="@+id/textBox1"
+        android:layout_below="@+id/textBox1"
         android:ems="10" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/addBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editText2"
-        android:layout_below="@+id/editText2"
+        android:layout_alignLeft="@+id/textBox2"
+        android:layout_below="@+id/textBox2"
         android:text="Add" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/subBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/button1"
-        android:layout_alignBottom="@+id/button1"
-        android:layout_alignRight="@+id/editText2"
+        android:layout_alignBaseline="@+id/addBtn"
+        android:layout_alignBottom="@+id/addBtn"
+        android:layout_alignRight="@+id/textBox2"
         android:text="Sub" />
 
 </RelativeLayout>

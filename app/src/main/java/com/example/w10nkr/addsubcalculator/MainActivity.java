@@ -2,7 +2,6 @@ package com.example.w10nkr.addsubcalculator;
 
 import android.os.Bundle;
 import android.app.Activity;
-import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -11,7 +10,7 @@ import android.widget.Toast;
 
 public class MainActivity extends Activity {
     //step1 : create all the variables.
-    EditText et1, et2, et3;
+    EditText input1, input2;
     Button b1, b2;
 
     @Override
@@ -20,19 +19,19 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         //step2 : get all the views from xml file.
-        et1 = (EditText) findViewById(R.id.editText1);
-        et2 = (EditText) findViewById(R.id.editText2);
+        input1 = (EditText) findViewById(R.id.textBox1);
+        input2 = (EditText) findViewById(R.id.textBox2);
 
-        b1 = (Button) findViewById(R.id.button1);
-        b2 = (Button) findViewById(R.id.button2);
+        b1 = (Button) findViewById(R.id.addBtn);
+        b2 = (Button) findViewById(R.id.subBtn);
 
         //step3 : write add functionality.
         b1.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                String f = et1.getText().toString();
+                String f = input1.getText().toString();
                 int i = Integer.parseInt(f);
-                String s = et2.getText().toString();
+                String s = input2.getText().toString();
                 int j = Integer.parseInt(s);
 
                 Integer result = i+j;
@@ -44,9 +43,9 @@ public class MainActivity extends Activity {
         b2.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                String f = et1.getText().toString();
+                String f = input1.getText().toString();
                 int i = Integer.parseInt(f);
-                String s = et2.getText().toString();
+                String s = input2.getText().toString();
                 int j = Integer.parseInt(s);
 
                 Integer result = i-j;
