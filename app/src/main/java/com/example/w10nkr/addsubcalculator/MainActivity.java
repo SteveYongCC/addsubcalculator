@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
     //step1 : create all the variables.
@@ -21,7 +22,6 @@ public class MainActivity extends Activity {
         //step2 : get all the views from xml file.
         et1 = (EditText) findViewById(R.id.editText1);
         et2 = (EditText) findViewById(R.id.editText2);
-        et3 = (EditText) findViewById(R.id.editText3);
 
         b1 = (Button) findViewById(R.id.button1);
         b2 = (Button) findViewById(R.id.button2);
@@ -37,7 +37,8 @@ public class MainActivity extends Activity {
 
                 Integer result = i+j;
                 String res = result.toString();
-                et3.setText(res);
+
+                Toast.makeText(MainActivity.this, "Result " + result, Toast.LENGTH_LONG).show();
             }
         });
         b2.setOnClickListener(new OnClickListener() {
@@ -50,7 +51,8 @@ public class MainActivity extends Activity {
 
                 Integer result = i-j;
                 String res = result.toString();
-                et3.setText(res);
+
+                Toast.makeText(MainActivity.this, "Result " + result, Toast.LENGTH_LONG).show();
             }
         });
 
